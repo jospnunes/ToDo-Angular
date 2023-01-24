@@ -1,19 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+    color: rgb(8, 8, 8);
+}
 #main{
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    background-color: black;
+}
+#container{
+    background: #fff;
+    max-width: 400px;
+    width: 100%;
+    margin: 120px auto;
+    padding: 25px;
+    border-radius: 5px;
+}
+#addBtn{
+    width: 80px;
+    height: 20px;
+    background-color: whitesmoke;
+    margin-left: 10px;
+}
+#removeBtn{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    background-color: red;
+}
+#addTodo{
+    padding: 1rem;
+    display: inline-block;
 }
 
 ul {
+    max-height: 250px;
+    overflow-y: auto;
+}
+  
+li {
+    position: relative;
     list-style: none;
-    padding: 0;
-  }
+    margin-bottom: 8px;
+    background: #f2f2f2;
+    border-radius: 3px;
+    padding: 10px 15px;
+    cursor: default;
+    overflow: hidden;
+    word-wrap: break-word;
+    
+}
   
-  li {
-    display: flex;
-    align-items: center;
-    padding: 8px;
-  }
-  
-  li.done {
+li.done {
     text-decoration: line-through;
-  }
+    color: red;
+}

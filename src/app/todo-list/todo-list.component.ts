@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class TodoListComponent {
   tasks = [
-    { name: 'Estudar Angular', done: false }
+    { name: 'Estudar Angular', done: true }
   ];
   newTaskName = '';
 

@@ -1,15 +1,18 @@
 
 <div id="main">
-    <div id="addTodo">
-        <input type="text" [(ngModel)]="newTaskName" placeholder="Nova tarefa" />
-        <button (click)="addTask()">Adicionar</button>
+    <div id="container">
+        <div id="addTodo">
+            <h1>Adicione sua tarefa:</h1>
+            <input type="text" [(ngModel)]="newTaskName" placeholder="Nova tarefa" />
+            <button (click)="addTask()" id="addBtn">Adicionar</button>
+        </div>
+        
+        <ul>
+            <li *ngFor="let task of tasks" [ngClass]="{'done': task.done}">
+            <input type="checkbox" [(ngModel)]="task.done" />
+            {{ task.name }}
+            <button (click)="deleteTask(task)" id="removeBtn" >X</button>
+            </li>
+        </ul>
     </div>
-    
-      <ul>
-        <li *ngFor="let task of tasks">
-        <input type="checkbox" [(ngModel)]="task.done" />
-        {{ task.name }}
-        <button (click)="deleteTask(task)">X</button>
-        </li>
-    </ul>
 </div>
