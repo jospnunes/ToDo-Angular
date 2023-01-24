@@ -15,4 +15,8 @@ export class TodoListComponent {
     this.tasks.push({name: this.newTaskName, done: false});
     this.newTaskName = '';
   }
+
+  deleteTask(task: any){
+    this.tasks = this.tasks.filter(t => t !== task);
+  }
 }
