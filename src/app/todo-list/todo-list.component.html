@@ -1,6 +1,14 @@
-<ul>
-    <li *ngFor="let task of tasks">
-      <input type="checkbox" [(ngModel)]="task.done" />
-      {{ task.name }}
-    </li>
-  </ul>
+
+<div id="main">
+    <div id="addTodo">
+        <input type="text" [(ngModel)]="newTaskName" placeholder="Nova tarefa" />
+        <button (click)="addTask()">Adicionar</button>
+    </div>
+    
+      <ul>
+        <li *ngFor="let task of tasks">
+        <input type="checkbox" [(ngModel)]="task.done" />
+        {{ task.name }}
+        </li>
+    </ul>
+</div>

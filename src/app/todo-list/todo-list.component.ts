@@ -9,4 +9,10 @@ export class TodoListComponent {
   tasks = [
     { name: 'Estudar Angular', done: false }
   ];
+  newTaskName = '';
+
+  addTask(){
+    this.tasks.push({name: this.newTaskName, done: false});
+    this.newTaskName = '';
+  }
 }
