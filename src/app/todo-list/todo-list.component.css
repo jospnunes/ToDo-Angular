@@ -18,7 +18,8 @@
 #input{
     border: 2px solid black;
     margin-left: 25px;
-    width: 60%;
+    width: 200px;
+    height: 30px;
 }
 #addBtn{
     border: 2px solid black;
