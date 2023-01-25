@@ -1,13 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
     font-family: Roboto;
-    color: rgb(8, 8, 8);
 }
 #main{
-    width: 100%;
     height: 100vh;
     padding: 10px;
     background-color: black;
@@ -20,7 +15,13 @@
     padding: 25px;
     border-radius: 5px;
 }
+#input{
+    border: 2px solid black;
+    margin-left: 25px;
+    width: 60%;
+}
 #addBtn{
+    border: 2px solid black;
     width: 80px;
     height: 20px;
     background-color: whitesmoke;
@@ -43,12 +44,13 @@ ul {
 }
   
 li {
+    border: 2px solid black;
     position: relative;
     list-style: none;
     margin-bottom: 8px;
     background: #f2f2f2;
     border-radius: 3px;
-    padding: 10px 15px;
+    padding: 10px;
     cursor: default;
     overflow: hidden;
     word-wrap: break-word;
