@@ -9,7 +9,7 @@
         
         <ul>
             <li *ngFor="let task of tasks" [ngClass]="{'done': task.done}">
-            <input type="checkbox" [(ngModel)]="task.done" />
+            <input type="checkbox" [(ngModel)]="task.done" (ngModelChange)="saveTasks()" />
             {{ task.name }}
             <button (click)="deleteTask(task)" id="removeBtn">X</button>
             </li>
