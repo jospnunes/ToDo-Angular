@@ -9,10 +9,21 @@
         
         <ul>
             <li *ngFor="let task of tasks" [ngClass]="{'done': task.done}">
-            <input type="checkbox" [(ngModel)]="task.done" (ngModelChange)="saveTasks()" />
-            {{ task.name }}
-            <button (click)="deleteTask(task)" id="removeBtn">X</button>
-            </li>
+            <input type="checkbox" [(ngModel)]="task.done" (ngModelChange)="saveTasks()"/>
+            
+            <ng-container *ngIf="task !== editingTask; else editingTemplate">
+                {{ task.name }}
+            </ng-container>
+
+            <ng-template #editingTemplate>
+                <input type="text" [(ngModel)]="task.name" />
+                <button (click)="updateTask(task)" id="updateBtn">Atualizar</button>
+              </ng-template>
+            
+            
+              <button (click)="editTask(task)" id="editBtn">Editar</button>
+              <button (click)="deleteTask(task)" id="removeBtn">X</button>
+        </li>
         </ul>
     </div>
 </div>

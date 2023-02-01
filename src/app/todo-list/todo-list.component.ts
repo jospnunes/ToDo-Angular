@@ -10,7 +10,16 @@ export class TodoListComponent {
     { name: 'Estudar Angular', done: true }
   ];
   newTaskName = '';
+  editingTask : any = null;
 
+  editTask(task: any){
+    this.editingTask = task;
+  }
+
+  updateTask(task: any){
+    this.editingTask = null;
+    this.saveTasks();
+  }
   loadTasks(){
     const storedTasks = localStorage.getItem("tasks");
     if(storedTasks){
